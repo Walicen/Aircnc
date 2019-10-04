@@ -12,7 +12,9 @@ export default function Login({ navigation }) {
 
     useEffect(() => {
         AsyncStorage.getItem('user').then(user => {
-            navigation.navigate('List');
+            if(user != null){
+                navigation.navigate('List');                
+            }
         });
     },[]);
 
@@ -96,7 +98,5 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: '#fff',
-        fontWeight: 'bold',
-        backgroundColor: '#000'
     },
 });
