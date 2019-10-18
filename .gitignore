@@ -296,3 +296,4 @@ lint/tmp/
 # lint/reports/
 
 backend/uploads/*
+!backend/uploads/.gitkeep
